@@ -8,7 +8,7 @@
       <span class="icon-bar"></span>
       <span class="icon-bar"></span>
     </button>
-    <%= link_to "Toilet Paper Society", root_path, class: "navbar-brand" %>
+    <%= link_to "Toilet Paper Society", "#", class: "navbar-brand" %>
   </div>
 
   <!-- Collect the nav links, forms, and other content for toggling -->
@@ -17,14 +17,17 @@
     	<% if user_signed_in? %>
     	<li><%= link_to "How It Works", "#" %></li>
               <li><%= link_to "Wipe Away Hunger", "#" %></li>
-              <li><%= link_to "Account Settings", edit_profile_path %></li>
-              <li><%= link_to "Sign Out", sign_out_path %></li>
+              <li><%= link_to "Account Settings", koudoku.owner_subscriptions_path(@user) %></li>
+              <li><%= link_to "Sign Out", "#" %></li>
             <% else %>
-              <li><%= link_to "Join Now", new_user_registration_path, class: "btn-join" %></li>
+              <li><%= link_to 'Join Now', main_app.pricing_path, class: "btn-join" %></li>
               <li><%= link_to "How It Works", "#" %></li>
               <li><%= link_to "Wipe Away Hunger", "#" %></li>
-              <li><%= link_to "Log In", new_user_session_path %></li>
+              <li><%= link_to "Log In", "#" %></li>
             <% end %>
+            <li><%= link_to "twitter", "http://www.twitter.com/tp_society", target: "_blank", class: "header-twitter" %></li>
+          <li><%= link_to "facebook", "https://www.facebook.com/TPsocy", target: "_blank", class: "header-facebook" %></li>
+          <li><%= link_to "instagram", "http://www.instagram.com/tp_society", target: "_blank", class: "header-instagram" %></li>
     </ul>
   </div><!-- /.navbar-collapse -->
 </div>
