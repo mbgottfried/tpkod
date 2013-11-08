@@ -17,7 +17,7 @@
     	<% if user_signed_in? %>
     	<li><%= link_to "How It Works", "#" %></li>
               <li><%= link_to "Wipe Away Hunger", "#" %></li>
-              <li><%= link_to "Account Settings", koudoku.owner_subscriptions_path(@user) %></li>
+              <li><%= link_to "Account Settings", "#" %></li>
               <li><%= link_to "Sign Out", "#" %></li>
             <% else %>
               <li><%= link_to 'Join Now', main_app.pricing_path, class: "btn-join" %></li>
